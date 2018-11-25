@@ -31,6 +31,6 @@ services:
     external_links:
       - 'v_serve_db:v_serve_db'
     extra_hosts:
-      - 'v_serve_db:10.140.0.2'
+      - 'v_serve_db:10.148.0.2'
     restart: always
 

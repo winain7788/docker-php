@@ -23,7 +23,14 @@ services:
     ports:
       - '9000:9000'
     volumes:
+      - ./certs/live/phuket.weserve.co.th/fullchain.pem:/usr/lib/ssl/cert.pem
+      - ./phpfpm/php.ini-development:/usr/local/etc/php/php.ini
+      - ./phpfpm/php-fpm.conf:/usr/local/etc/php-fpm.conf
+      - ./phpfpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./site/public_html:/var/www/html
+      - ./site/public_html/media:/var/www/html
+      - ./site/public_html/cache:/var/www/html/application/cache
+      - ./site/public_html/config:/var/www/html/application/config
     external_links:
       - 'v_serve_db:v_serve_db'
     extra_hosts:

@@ -1,4 +1,8 @@
 certs/
 default.conf
 logs/
-sites/public_html/
+nginx/proxy_ssl.conf
+site/cache/
+site/config/
+site/media/
+site/public_html/

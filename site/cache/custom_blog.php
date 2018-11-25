@@ -1,0 +1,9 @@
+<?php 
+$route['(\w{2})/blog/detail/76/(.*)']='front/blog_detail/76/$1';
+$route['(\w{2})/blog/detail/77/(.*)']='front/blog_detail/77/$1';
+$route['(\w{2})/blog/detail/78/(.*)']='front/blog_detail/78/$1';
+$route['(\w{2})/blog/detail/81/(.*)']='front/blog_detail/81/$1';
+$route['(\w{2})/blog/detail/83/(.*)']='front/blog_detail/83/$1';
+$route['(\w{2})/blog/detail/84/(.*)']='front/blog_detail/84/$1';
+$route['(\w{2})/blog/detail/85/(.*)']='front/blog_detail/85/$1';
+$route['(\w{2})/blog/detail/86/(.*)']='front/blog_detail/86/$1';

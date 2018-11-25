@@ -28,7 +28,7 @@ services:
       - ./phpfpm/php-fpm.conf:/usr/local/etc/php-fpm.conf
       - ./phpfpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./site/public_html:/var/www/html
-      - ./site/public_html/media:/var/www/html
+      - ./site/public_html/media:/var/www/html/media
       - ./site/public_html/cache:/var/www/html/application/cache
       - ./site/public_html/config:/var/www/html/application/config
     external_links:

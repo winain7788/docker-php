@@ -1,8 +1,8 @@
 version: '3'
 services:
-  v_serve_proxy:
+  proxy:
     image: nginx:latest
-    container_name: v_serve_proxy
+    container_name: proxy
     ports:
       - '80:80'
       - '443:443'
@@ -15,8 +15,8 @@ services:
     links:
       - v_serve_web
     restart: always
-  v_serve_web:
-    container_name: v_serve_web
+  web:
+    container_name: web
     build:
       context: .
       dockerfile: phpfpm/Dockerfile
@@ -29,8 +29,8 @@ services:
       - ./phpfpm/www.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./site/public_html:/var/www/html
     external_links:
-      - 'v_serve_db:v_serve_db'
+      - 'mariadb:mariadb'
     extra_hosts:
-      - 'v_serve_db:10.148.0.2'
+      - 'mariadb:{your-db-ipaddress}'
     restart: always
 

@@ -13,7 +13,7 @@ services:
       - ./certs:/etc/letsencrypt
       - ./certs-data:/data/letsencrypt
     links:
-      - v_serve_web
+      - web
     restart: always
   web:
     container_name: web
